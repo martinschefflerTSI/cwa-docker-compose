@@ -1,6 +1,11 @@
 # cwa-allinone
 Start the german corona app backend with a single docker-compose file
 
+Prerequisites:
+Maven
+Java 11
+Docker-Compose
+
 Step 1: Execute init.bat or init.sh. This downloads the cwa repositories into the current directory and executes maven for each repo.
 Step 2: docker-compose up 
 Step 3: Open keycloak admin interface at http://localhost:8080 with user admin, password admin
