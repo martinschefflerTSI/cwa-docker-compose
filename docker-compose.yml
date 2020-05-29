@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+
+  verificationserver:
+    container_name: verificationserver
+    build: 
+      context: ./cwa-verification-server
+    ports:
+      - "8082:8080"
+     
+  iam:
+    container_name: iam
+    build: 
+      context: ./cwa-verification-iam
+    environment:   
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin     
+      KEYCLOAK_IMPORT: /tmp/cwa-realm.json
+    volumes:
+      - "./cwa-realm.json:/tmp/cwa-realm.json"
+      - "./cwa-verification-iam/src/themes/cwa:/opt/jboss/keycloak/themes/cwa"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+      
+  verificationportal:
+    container_name: verificationportal
+    build:
+      context: ./cwa-verification-portal
+    ports:
+      - "8081:8081"
+    
+volumes:
+  postgres_data:
