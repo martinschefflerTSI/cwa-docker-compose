@@ -30,6 +30,6 @@ services:
       context: ./cwa-verification-portal
     ports:
       - "8081:8081"
-    
+    entrypoint: "java -Dkeycloak.auth-server-url=http://iam:8080/auth -Dcwa-verification-server.url=http://verificationserver:8080 -jar app.jar"
 volumes:
   postgres_data:

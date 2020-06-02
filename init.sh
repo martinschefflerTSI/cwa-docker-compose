@@ -8,3 +8,5 @@ git clone https://github.com/corona-warn-app/cwa-verification-iam.git
 mvn -f cwa-verification-server install
 mvn -f cwa-verification-portal install
 mvn -f cwa-testresult-server -DskipTests install
+
+docker-compose build
