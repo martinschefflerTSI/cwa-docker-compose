@@ -3,7 +3,9 @@ Start the german corona warn app backend with a single docker-compose file
 
 
 Unfortunately keycloak is not very docker friendly. 
+
 https://stackoverflow.com/questions/50670734/keycloak-in-docker-compose-network
+
 Please add an entry to the hosts file of your docker host computer. Open /etc/hosts (Windows: C:\Windows\System32\drivers\etc\hosts) and add an entry "127.0.0.1 iam".
 
 Setup process:
