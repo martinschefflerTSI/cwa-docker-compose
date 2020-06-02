@@ -1,5 +1,5 @@
 # cwa-allinone
-Start the german corona app backend with a single docker-compose file
+Start the german corona warn app backend with a single docker-compose file
 
 Prerequisites:
 Maven
@@ -9,7 +9,7 @@ Docker-Compose
 
 Unfortunately keycloak is not very docker friendly. 
 https://stackoverflow.com/questions/50670734/keycloak-in-docker-compose-network
-Please add an entry to the hosts file of your docker host computer. Please open /etc/hosts and add host name "iam" for localhost/127.0.0.1.
+Please add an entry to the hosts file of your docker host computer. Open /etc/hosts (Windows: C:\Windows\System32\drivers\etc\hosts) and add an entry "127.0.0.1 iam".
 
 To start the corona app backend:
 Step 1: Execute init.bat or init.sh. This downloads the cwa repositories into the current directory and executes maven for each repo.
