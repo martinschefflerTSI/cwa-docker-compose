@@ -1,7 +1,6 @@
 # cwa-docker-compose
 Start the german corona warn app backend with a single docker-compose file
 
-
 Unfortunately keycloak is not very docker friendly. 
 
 https://stackoverflow.com/questions/50670734/keycloak-in-docker-compose-network
@@ -9,10 +8,10 @@ https://stackoverflow.com/questions/50670734/keycloak-in-docker-compose-network
 Please add an entry to the hosts file of your docker host computer. Open /etc/hosts (Windows: C:\Windows\System32\drivers\etc\hosts) and add an entry "127.0.0.1 iam".
 
 Setup process:
-Step 1: docker-compose up 
-Step 2: Open keycloak admin interface at http://iam:8080 with user admin, password admin
-Step 3: Create a new user. Go to Users -> Add User. Enter a username, click "Email verified". After clicking save, go to "Credentials" and add a password. Uncheck "temporary", click "Set password".
-Step 4: Go to "Role Mappings" in the user submenu and add the roles c19hotline and teletan_generator.
+* docker-compose up 
+* Open keycloak admin interface at http://iam:8080 with user admin, password admin
+* Create a new user. Go to Users -> Add User. Enter a username, click "Email verified". After clicking save, go to "Credentials" and add a password. Uncheck "temporary", click "Set password".
+* Go to "Role Mappings" in the user submenu and add the roles c19hotline and teletan_generator.
 
 __Verification Portal__
 
