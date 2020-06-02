@@ -31,5 +31,10 @@ services:
     ports:
       - "8081:8081"
     entrypoint: "java -Dkeycloak.auth-server-url=http://iam:8080/auth -Dcwa-verification-server.url=http://verificationserver:8080 -jar app.jar"
-volumes:
-  postgres_data:
+    
+  testresultserver:
+    container_name: testresultserver
+    build:
+      context: ./cwa-testresult-server
+    ports:
+      - "8083:8080"
