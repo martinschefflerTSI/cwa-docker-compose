@@ -4,15 +4,13 @@ services:
 
   verificationserver:
     container_name: verificationserver
-    build: 
-      context: ./cwa-verification-server
+    image: wooyay/cwa-verification-server:latest
     ports:
       - "8082:8080"
      
   iam:
     container_name: iam
-    build: 
-      context: ./cwa-verification-iam
+    image: wooyay/cwa-verification-iam:latest
     environment:   
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin     
@@ -26,15 +24,13 @@ services:
       
   verificationportal:
     container_name: verificationportal
-    build:
-      context: ./cwa-verification-portal
+    image: wooyay/cwa-verification-portal:latest    
     ports:
       - "8081:8081"
     entrypoint: "java -Dkeycloak.auth-server-url=http://iam:8080/auth -Dcwa-verification-server.url=http://verificationserver:8080 -jar app.jar"
     
   testresultserver:
     container_name: testresultserver
-    build:
-      context: ./cwa-testresult-server
+    image: wooyay/cwa-testresult-server:latest
     ports:
       - "8083:8080"
