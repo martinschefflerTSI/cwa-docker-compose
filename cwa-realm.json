@@ -672,7 +672,7 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://localhost:8081/cwa/*"
+        "http://localhost:8081/*"
       ],
       "webOrigins": [
         "http://localhost:8081"
