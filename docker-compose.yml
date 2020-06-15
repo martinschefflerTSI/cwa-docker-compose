@@ -21,7 +21,7 @@ services:
       - "./cwa-realm.json:/tmp/cwa-realm.json"
       - "./cwa-verification-iam/src/themes/cwa:/opt/jboss/keycloak/themes/cwa"
     ports:
-      - "8080:8080"
+      - "8080:7080"
       - "8443:8443"
       
   verificationportal:
