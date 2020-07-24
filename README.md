@@ -15,7 +15,7 @@ Setup process:
 
 __Verification Portal__
 
-Open http://localhost:8081/cwa/teletan - this should redirect you to keycloak, where you can enter the credentials of the user that you manually created.
+Open http://localhost:8081/cwa/start - this should redirect you to keycloak, where you can enter the credentials of the user that you manually created.
 After that, you will be redirected back to the verification portal where you should be able to generate a teleTAN.
 
 __Verification Server__
